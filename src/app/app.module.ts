@@ -3,12 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PricesComponent } from './components/prices/prices.component';
+import { ProtectedComponent } from './components/protected/protected.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
-
+    HomeComponent,
+    NavbarComponent,
+    PricesComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule
