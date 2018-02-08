@@ -8,6 +8,10 @@ import { PricesComponent } from './components/prices/prices.component';
 import { ProtectedComponent } from './components/protected/protected.component';
 import { APP_ROUTING } from './app.routes';
 
+
+//Services
+import { AuthService } from './services/auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,10 @@ import { APP_ROUTING } from './app.routes';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    //Services
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
