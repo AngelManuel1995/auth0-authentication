@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PricesComponent } from './components/prices/prices.component';
 import { ProtectedComponent } from './components/protected/protected.component';
-
+import { AuthGuardService } from './services/auth-guard.service';
 const APP_ROUTES = [
     
     { 
@@ -15,7 +15,8 @@ const APP_ROUTES = [
     },
     {
       path:'protected', 
-      component:ProtectedComponent
+      component:ProtectedComponent, 
+      canActivate: [AuthGuardService]
     }, 
     {
       path:'**', 
