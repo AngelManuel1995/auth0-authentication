@@ -16,7 +16,18 @@
 			</li>
 		</ul>
 		<span class="navbar-text">
-			Navbar text with an inline element
+			<button (click)="login()" 
+					*ngIf="!auth.isAuthenticated()" 
+					type="button" 
+					class="btn btn-outline-danger btn-sm" >
+					Log in
+			</button>
+			<button (click)="logout()"
+					*ngIf="auth.isAuthenticated()"
+					type="button" 
+					class="btn btn-outline-success btn-sm" >
+					Log out
+			</button>
 		</span>
 	</div>
 </nav>
