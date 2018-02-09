@@ -1,1 +1,20 @@
-<h1>Protected</h1>
+<h1 class="text-center">Protected</h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="profile.picture" class="img-fluid rounded-circle" height="170" width="170" >
+    </div>
+    <div class="col-md-8">
+        <ul class="list-group">
+            <li class="list-group-item">{{ profile.name }}</li>
+            <li class="list-group-item">{{ profile.nickname }}</li>
+            <li class="list-group-item">{{ profile.updated_at | date:'dd mm yyyy' }}</li>
+        </ul>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-center">Wellcome: <span class="text-danger">{{ profile.name }}</span></h1>
+    </div>
+</div>
